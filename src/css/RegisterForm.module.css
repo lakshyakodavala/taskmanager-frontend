@@ -1,21 +1,24 @@
 /* RegisterForm.module.css */
+
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+/* Set font family for the entire body */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Style for form title */
 .title {
     text-align: center;
     margin-bottom: 20px;
-    color: white;
-    /* Text color set to white */
-    font-weight: 500;
+    color: white; /* Text color set to white */
+    font-weight: 500; /* Set font weight */
 }
 
-
+/* Style for container */
 .container {
-    background-image: linear-gradient(to right, #007BFF, #6A11CB);
+    background-image: linear-gradient(to right, #007BFF, #6A11CB); /* Gradient background */
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -23,58 +26,66 @@ body {
     align-items: center;
 }
 
+/* Style for card */
 .card {
     width: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
     border-radius: 10px;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Background color */
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* Blur effect */
 }
 
+/* Style for card image */
 .card img {
     width: 100%;
     height: auto;
 }
 
+/* Style for card content */
 .card.content {
     padding: 20px;
 }
 
+/* Style for card title */
 .card.title {
     text-align: center;
     margin-bottom: 20px;
-    color: white;
-    font-weight: 500;
+    color: white; /* Text color set to white */
+    font-weight: 500; /* Set font weight */
 }
 
+/* Style for form item within card */
 .card.form-item {
     width: 100%;
     margin-bottom: 15px;
 }
 
+/* Style for input within form item */
 .card.form-item input {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* Box shadow */
 }
 
+/* Style for button within form item */
 .card.form-item button {
     width: 100%;
-    background-color: #007BFF;
-    border-color: #007BFF;
+    background-color: #007BFF; /* Background color */
+    border-color: #007BFF; /* Border color */
     border-radius: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* Box shadow */
 }
+
+/* Style for form item label */
 .custom-form .ant-form-item-label {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #1890ff; /* Highlight color */
 }
 
+/* Style for input within form item */
 .custom-form .ant-input {
     font-family: "Poppins", sans-serif;
 }
-
-

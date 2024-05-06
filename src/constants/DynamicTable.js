@@ -1,10 +1,12 @@
+// Import necessary components and dependencies from Ant Design
 import React, { useState } from "react";
 import { Table, Button, Modal, Form, Input, Popconfirm } from "antd";
 import { Select } from 'antd';
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import taskService from "../actions/tasks";
-import { Notification } from "./notification";
+import taskService from "../actions/tasks"; // Import taskService for task-related actions
+import { Notification } from "./notification"; // Import notification component
 
+// Define DynamicListTable functional component
 const DynamicListTable = ({
     dataSource,
     columns,
@@ -13,21 +15,24 @@ const DynamicListTable = ({
     pagination,
     onPageChange,
 }) => {
-    const [visible, setVisible] = useState(false);
-    // eslint-disable-next-line
-    const [record, setRecord] = useState(null);
-    const [editedRecord, setEditedRecord] = useState(null);
+    // Define state variables using useState hook
+    const [visible, setVisible] = useState(false); // State variable for modal visibility
+    const [record, setRecord] = useState(null); // State variable for selected record
+    const [editedRecord, setEditedRecord] = useState(null); // State variable for edited record
 
+    // Function to show modal and set selected record
     const showModal = (record) => {
         setRecord(record);
         setEditedRecord(record);
         setVisible(true);
     };
 
+    // Function to handle modal cancel
     const handleCancel = () => {
         setVisible(false);
     };
 
+    // Function to handle task update
     const handleUpdate = async () => {
         const { id, ...updatedData } = editedRecord;
         const response = await taskService.updateTask(editedRecord.id, updatedData);
@@ -41,10 +46,12 @@ const DynamicListTable = ({
        
     };
 
+    // Function to handle form input change
     const handleChange = (key, value) => {
         setEditedRecord({ ...editedRecord, [key]: value });
     };
 
+    // Function to handle task deletion
     const handleDelete = async(record)=>{
         const response = await taskService.deleteTask(record.id);
         if (response.status === 200) {
@@ -57,6 +64,7 @@ const DynamicListTable = ({
         }
     }
 
+    // Return JSX for DynamicListTable component
     return (
         <>
             <div>
@@ -169,4 +177,6 @@ const DynamicListTable = ({
     );
 };
 
+// Export DynamicListTable component as default
 export default DynamicListTable;
+
